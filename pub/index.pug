@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    style 
+        include ../static/style.css
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+    form(action="/" method="POST" id="contact")
+          h1 #{message}
+          label(for="name") Name:
+          input(type="text" id="name" name="name" required)
+
+          label(for="email") Email:
+          input(type="email" id="email" name="email" required)
+
+          label(for="message") Message:
+          textarea(id="message" name="message" rows="5" required)
+
+          button(type="submit") Submit
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
